@@ -1,0 +1,16 @@
+1.什么是HTML
+	HTML：hyper　text　markup language超文本标记语言。由大量标签组成，每个标签都由开始标签和结束标签
+	
+	超文本：流媒体，图片，声音，视频
+
+2.HTML开发
+	使用文本编辑器即可，文件扩展名是.html或.htm
+	hbuilder
+
+	运行：
+		直接使用浏览器打开html文件即可
+
+3.HTML制订
+	W3C（万维网联盟）制订了规范
+	
+
