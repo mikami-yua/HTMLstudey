@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <title>合并单元格+th标签</title>
+</head>
+<body>
+
+    <!--
+        row合并删下面的，不能删上面的
+        col合并对删除那个没有要求
+    -->
+    <table border="1px" width="60%" height="150px">
+        <tr>
+            <th>员工编号</th><!--自动加粗，居中-->
+            <th>员工薪资</th>
+            <th>部门名称</th>
+
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+        </tr>
+        <tr>
+            <td>d</td>
+            <td>e</td>
+            <td rowspan="2">fi</td><!--f和i合并-->
+        </tr>
+        <tr>
+            <td colspan="2">gh</td><!--g和h合并-->
+
+
+        </tr>
+    </table>
+</body>
+</html>
