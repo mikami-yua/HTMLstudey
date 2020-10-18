@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单form</title>
+	</head>
+	<body>
+		<!--
+			表单最重要的作用就是接受用户的信息
+				表单展现之后用户填写表单，点击提交按钮，提交数据
+			使用form标签画表单
+			一个网页中可以有多个表单
+			表单最终需要提交数据给服务器，在action中写服务器地址
+				action也可以向服务器发送请求
+				"http://192.168.0.3:8080/oa/save"提交给8080端口的软件
+			
+			表单和超链接都可以向服务器发送请求，只不过表单可以携带数据
+		-->
+		<form action="http://localhost:8080/oa/save">
+			<!--
+				画一个提交按钮，可以提交表单
+				使用input输入域  type="submit"具有提交表单的作用
+			-->
+			用户名<input type="text" />
+			密码<input type="password"/>
+			<input type="submit" value="用来设置按钮上显示的文本" />
+			
+			<!--这个是普通按钮不具备提交表单的能力-->
+			<input type="button"/>
+		</form>
+		<br><br><br />
+		
+		<!--
+			表单以http://127.0.0.1:8848/html_code/011-%E8%A1%A8%E5%8D%95.html?username=abc&pwd=111
+			格式提交数据给服务器
+			格式：action?name=value&name=value&name=value...
+			【重点】表单项有name属性的，一律会提交给服务器，不提交的项不写name属性即可
+		-->
+		<form action="http://localhost:8080/oa/save">
+			<table>
+				<tr>
+					<td>用户名</td>
+					<td><input type="text" name="username"/></td>
+				</tr>
+				<tr>
+					<td>密码</td>
+					<td><input type="password" name="pwd"/></td>
+				</tr>
+				<tr align="center">
+					<td colspan="2">
+						<input type="submit" value="登录" />
+						&nbsp;
+						<!--仅在form标签内部管用-->
+						<input type="reset" value="清空" />
+					</td>
+					
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

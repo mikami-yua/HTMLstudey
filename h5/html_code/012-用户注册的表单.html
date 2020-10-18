@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>用户注册表单</title>
+	</head>
+	<body>
+		<!--
+			用户注册
+				用户名
+				用户密码
+				确认密码
+				性别
+				兴趣爱好	
+				学历
+				简介
+		-->
+		<form action="http://localhost:8080/jd/register" method="post"><!--post方法用户名和密码不会显示在地址栏更安全-->
+			用户名
+			<input type="text" name="username" />
+			<br>
+			密码
+			<input type="password" name="passwd"/>
+			<br>
+			确认密码
+			<input type="password" />
+			<br>
+			性别
+			<!--name一样表示同一组  除了输入框，需要被server处理的数据都需要指定value-->
+			<input type="radio" name="sex" value="1"/> 男
+			<input type="radio" name="sex" value="0" checked /> 女<!--checked默认选中-->
+			<br>
+			兴趣爱好
+			<input type="checkbox" name="hibby" value="smoke" checked />抽烟
+			<input type="checkbox" name="hibby" value="drink" />喝酒
+			<input type="checkbox" name="hibby" value="firehair" />烫头
+			<br>
+			学历
+			<select name="grade">
+				<option value="gz">高中</option>
+				<option value="dz">大专</option>
+				<option value="bk" selected>本科</option>
+				<option value="ss">硕士</option>
+				<option value="bs">博士</option>
+			</select>
+			<br>
+			简介<!--文本域 没有value属性-->
+			<textarea name="introduce" rows="10" cols="60"></textarea>
+			<br>
+			<input type="submit" value="注册" />
+			<input type="reset" value="清空" />
+			<!--
+			最终提交的数据
+			http://localhost:8080/jd/register?
+			username=rose&passwd=123&sex=0&hibby=smoke&hibby=drink&grade=bs&introduce=goodman
+			
+			超链接也可以提交数据给服务器，但提交的数据都是固定不变的
+			超链接的请求方式是get不是post
+			-->
+		</form>
+	</body>
+</html>

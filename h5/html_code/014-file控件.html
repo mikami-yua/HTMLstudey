@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>file控件 fidden控件</title>
+	</head>
+	<body>
+		<input type="file"/>
+		
+		<form action="http://localhost:8080/oa/save">
+			<!--隐藏域，网页上看不到，但是提交的时候会自动提交给服务器-->
+			<input type="hidden" name="useri" value="111" /><!--提交时地址栏可以看到-->
+			用户代码<input type="text" name="usercode"/>
+			<input type="submit" value="提交" />
+		</form>
+	</body>
+</html>
